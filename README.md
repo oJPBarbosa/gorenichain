@@ -11,9 +11,8 @@
   </a>
   <img alt="GitHub" src="https://img.shields.io/github/license/oJPBarbosa/gonerichain.svg">
   <a href="https://www.codacy.com/gh/oJPBarbosa/gonerichain/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=oJPBarbosa/gonerichain&amp;utm_campaign=Badge_Grade">
-    <img alt="Codacy Badge" src="">
-  </a>
-</p>
+    <img alt="Codacy Badge" src="https://app.codacy.com/project/badge/Grade/d8c407bb26e14da0965ce87db163d28b">
+  </a>/p>
 
 ## 🎯 About
 
