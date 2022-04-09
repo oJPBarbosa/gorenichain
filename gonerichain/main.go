@@ -1,6 +1,8 @@
 package main
 
-import "gonerichain/chain"
+import (
+	"gonerichain/chain"
+)
 
 func main() {
 	chain := chain.New[int]()
@@ -11,6 +13,6 @@ func main() {
 
 	chain.List()
 
-	chain.FindBlockByData(0)
-	chain.FindBlockByData(1)
+	chain.PrintBlockByData(0)
+	chain.PrintBlockByData(1)
 }

@@ -43,7 +43,7 @@ func (block *Block[T]) String() string {
 		block.Previous.Hash(), block.Nonce, block.Data, block.Timestamp)
 }
 
-func (block *Block[T]) Show() {
+func (block *Block[T]) Print() {
 	t := table.NewWriter()
 
 	t.SetOutputMirror(os.Stdout)

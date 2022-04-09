@@ -59,7 +59,7 @@ func (chain *Chain[T]) List() {
 	block := chain.Last
 
 	for block != nil {
-		block.Show()
+		block.Print()
 
 		block = block.Previous
 
@@ -69,28 +69,25 @@ func (chain *Chain[T]) List() {
 	}
 }
 
-func (chain *Chain[T]) FindBlockByData(data T) {
+func (chain *Chain[T]) PrintBlockByData(data T) {
 	block := chain.Last
 
 	for block != nil {
 		if block.Data == data {
+			block.Print()
 			break
 		}
 
 		block = block.Previous
 	}
 
-	if block == nil {
-		t := table.NewWriter()
+	t := table.NewWriter()
 
-		t.SetOutputMirror(os.Stdout)
-		t.SetStyle(table.StyleRounded)
+	t.SetOutputMirror(os.Stdout)
+	t.SetStyle(table.StyleRounded)
 
-		t.AppendHeader(table.Row{"BLOCK NOT FOUND", "VALUE"})
-		t.AppendRow(table.Row{"Data", data})
+	t.AppendHeader(table.Row{"BLOCK NOT FOUND", "VALUE"})
+	t.AppendRow(table.Row{"Data", data})
 
-		t.Render()
-	} else {
-		block.Show()
-	}
+	t.Render()
 }
