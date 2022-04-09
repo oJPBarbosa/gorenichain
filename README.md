@@ -1,6 +1,5 @@
 <p align="center">
-  <img alt="gonerichan-main" src="https://user-images.githubusercontent.com/79005271/162588833-4b730caf-2c6b-46fe-b96d-2bf8220cd703.png" />
-  <img alt="gonerichan-running" src="https://user-images.githubusercontent.com/79005271/162589130-5f2a9d9b-5bf7-42a4-8274-4fd43294eb39.gif" />
+  <img alt="gonerichan" src="https://user-images.githubusercontent.com/79005271/162589130-5f2a9d9b-5bf7-42a4-8274-4fd43294eb39.gif" />
 </p>
 
 <p align="center">
