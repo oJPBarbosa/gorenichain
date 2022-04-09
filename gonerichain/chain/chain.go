@@ -71,23 +71,27 @@ func (chain *Chain[T]) List() {
 
 func (chain *Chain[T]) PrintBlockByData(data T) {
 	block := chain.Last
+	found := false
 
-	for block != nil {
+	for block != nil && !found {
 		if block.Data == data {
-			block.Print()
-			break
+			found = true
+		} else {
+			block = block.Previous
 		}
-
-		block = block.Previous
 	}
 
-	t := table.NewWriter()
+	if found {
+		block.Print()
+	} else {
+		t := table.NewWriter()
 
-	t.SetOutputMirror(os.Stdout)
-	t.SetStyle(table.StyleRounded)
+		t.SetOutputMirror(os.Stdout)
+		t.SetStyle(table.StyleRounded)
 
-	t.AppendHeader(table.Row{"BLOCK NOT FOUND", "VALUE"})
-	t.AppendRow(table.Row{"Data", data})
+		t.AppendHeader(table.Row{"BLOCK NOT FOUND", "VALUE"})
+		t.AppendRow(table.Row{"Data", data})
 
-	t.Render()
+		t.Render()
+	}
 }
