@@ -71,6 +71,7 @@ func (chain *Chain[T]) List() {
 
 func (chain *Chain[T]) PrintBlockByData(data T) {
 	block := chain.Last
+
 	found := false
 
 	for block != nil && !found {
