@@ -55,7 +55,7 @@ func (chain *Chain[T]) AddBlock(data T) {
 	chain.Length++
 }
 
-func (chain *Chain[T]) List() {
+func (chain *Chain[T]) Print() {
 	block := chain.Last
 
 	for block != nil {

@@ -11,7 +11,7 @@ func main() {
 	chain.AddBlock(2)
 	chain.AddBlock(3)
 
-	chain.List()
+	chain.Print()
 
 	chain.PrintBlockByData(0)
 	chain.PrintBlockByData(1)
