@@ -64,7 +64,7 @@ func (chain *Chain[T]) Print() {
 		block = block.Previous
 
 		if block != nil {
-			fmt.Println("\t\t\t↓")
+			fmt.Println("\t\t\t↑")
 		}
 	}
 }
