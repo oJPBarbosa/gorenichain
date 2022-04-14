@@ -42,7 +42,7 @@ func Compute[T comparable](block *block.Block[T]) {
 }
 
 func (chain *Chain[T]) AddBlock(data T) {
-	block := block.New(chain.Last, data)
+	block := block.NewBlock(chain.Last, data)
 
 	Compute(block)
 

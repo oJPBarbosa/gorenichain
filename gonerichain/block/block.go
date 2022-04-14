@@ -18,7 +18,7 @@ type Block[T comparable] struct {
 	Timestamp int64
 }
 
-func New[T comparable](Previous *Block[T], data T) *Block[T] {
+func NewBlock[T comparable](Previous *Block[T], data T) *Block[T] {
 	block := new(Block[T])
 
 	block.Previous = Previous
